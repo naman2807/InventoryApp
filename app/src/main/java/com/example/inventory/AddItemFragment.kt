@@ -26,6 +26,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.navArgs
 import com.example.inventory.data.InventoryViewModel
 import com.example.inventory.data.InventoryViewModelFactory
+import com.example.inventory.data.Item
 import com.example.inventory.databinding.FragmentAddItemBinding
 
 /**
@@ -44,6 +45,8 @@ class AddItemFragment : Fragment() {
     private val viewModel : InventoryViewModel by activityViewModels {
         InventoryViewModelFactory((activity?.application as InventoryApplication).database.getDao())
     }
+
+    lateinit var item: Item
 
     override fun onCreateView(
         inflater: LayoutInflater,
