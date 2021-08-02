@@ -4,6 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
 class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
+    private fun insertItem(item: Item){
+
+    }
 }
 
 class InventoryViewModelFactory(private val itemDao: ItemDao): ViewModelProvider.Factory{
