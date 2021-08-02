@@ -18,4 +18,4 @@ data class Item(
     val quantityInStock: Int
     )
 
-fun Item.getFormattedCurrency():String = NumberFormat.getCurrencyInstance().format(itemPrice)
+fun Item.getFormattedPrice():String = NumberFormat.getCurrencyInstance().format(itemPrice)
