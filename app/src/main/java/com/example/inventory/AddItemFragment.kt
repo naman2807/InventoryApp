@@ -57,6 +57,10 @@ class AddItemFragment : Fragment() {
         return binding.root
     }
 
+    private fun isEntryValid(): Boolean{
+
+    }
+
     /**
      * Called before fragment is destroyed.
      */
