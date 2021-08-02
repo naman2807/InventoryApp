@@ -9,6 +9,7 @@ abstract class ItemRoomDatabase: RoomDatabase() {
     abstract fun getDao(): ItemDao
 
     companion object{
-
+        @Volatile
+        private var database: ItemRoomDatabase? = null
     }
 }
