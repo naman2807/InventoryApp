@@ -69,6 +69,10 @@ class ItemDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val id = navigationArgs.itemId
+        viewModel.retrieveItem(id).observe(this.viewLifecycleOwner) { selectedItem ->
+            item = selectedItem
+            bind(item)
+        }
     }
 
     /**
