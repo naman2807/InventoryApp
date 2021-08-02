@@ -11,6 +11,10 @@ class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
             itemDao.insert(item)
         }
     }
+
+    private fun getNewEntryItem(itemName: String, itemPrice: String, itemQuantity: String){
+
+    }
 }
 
 class InventoryViewModelFactory(private val itemDao: ItemDao): ViewModelProvider.Factory{
