@@ -37,6 +37,9 @@ class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
     }
 
     private fun updateItem(item: Item) {
+        viewModelScope.launch {
+            itemDao.update(item)
+        }
     }
 }
 
