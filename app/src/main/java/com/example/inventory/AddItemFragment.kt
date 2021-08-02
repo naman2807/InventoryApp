@@ -67,7 +67,11 @@ class AddItemFragment : Fragment() {
 
     private fun addNewItem(){
         if(isEntryValid()){
-
+            viewModel.addNewItem(
+                binding.itemName.text.toString(),
+                binding.itemPrice.text.toString(),
+                binding.itemCount.text.toString()
+            )
         }
     }
 
