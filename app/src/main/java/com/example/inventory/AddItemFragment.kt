@@ -58,6 +58,13 @@ class AddItemFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.saveAction.setOnClickListener {
+            addNewItem()
+        }
+    }
+
     private fun isEntryValid(): Boolean{
         return viewModel.isEntryValid(
             binding.itemName.text.toString(),
