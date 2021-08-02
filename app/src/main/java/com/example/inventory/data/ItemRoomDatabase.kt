@@ -11,10 +11,12 @@ abstract class ItemRoomDatabase: RoomDatabase() {
 
     companion object{
         @Volatile
-        private var database: ItemRoomDatabase? = null
+        private var INSTANCE: ItemRoomDatabase? = null
 
         fun getDatabase(context: Context):ItemRoomDatabase{
+            return INSTANCE ?: synchronized(this){
 
+            }
         }
     }
 }
