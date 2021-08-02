@@ -1,11 +1,13 @@
 package com.example.inventory.data
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
 class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
+    val allItems: LiveData<List<Item>>
     private fun insertItem(item: Item){
         viewModelScope.launch {
             itemDao.insert(item)
