@@ -23,6 +23,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.inventory.data.InventoryViewModel
 import com.example.inventory.data.InventoryViewModelFactory
@@ -73,6 +74,8 @@ class AddItemFragment : Fragment() {
                 binding.itemCount.text.toString()
             )
         }
+        val action = AddItemFragmentDirections.actionAddItemFragmentToItemListFragment()
+        findNavController().navigate(action)
     }
 
     /**
