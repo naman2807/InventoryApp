@@ -1,6 +1,8 @@
 package com.example.inventory.data
 
+import androidx.room.Database
 import androidx.room.RoomDatabase
 
-class ItemRoomDatabase: RoomDatabase() {
+@Database
+abstract class ItemRoomDatabase: RoomDatabase() {
 }
