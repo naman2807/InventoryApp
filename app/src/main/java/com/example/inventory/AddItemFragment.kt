@@ -65,6 +65,12 @@ class AddItemFragment : Fragment() {
         )
     }
 
+    private fun addNewItem(){
+        if(isEntryValid()){
+
+        }
+    }
+
     /**
      * Called before fragment is destroyed.
      */
