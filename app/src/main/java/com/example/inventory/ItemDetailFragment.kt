@@ -24,6 +24,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.inventory.data.Item
 import com.example.inventory.databinding.FragmentItemDetailBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
@@ -35,6 +36,8 @@ class ItemDetailFragment : Fragment() {
 
     private var _binding: FragmentItemDetailBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var item: Item
 
     override fun onCreateView(
         inflater: LayoutInflater,
