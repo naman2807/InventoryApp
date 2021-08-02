@@ -21,8 +21,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.inventory.data.InventoryViewModel
+import com.example.inventory.data.InventoryViewModelFactory
 import com.example.inventory.databinding.ItemListFragmentBinding
 
 /**
@@ -32,6 +35,11 @@ class ItemListFragment : Fragment() {
 
     private var _binding: ItemListFragmentBinding? = null
     private val binding get() = _binding!!
+
+    private val viewModel: InventoryViewModel by activityViewModels {
+        InventoryViewModelFactory(
+            (activity?.application as InventoryApplication).database.getDao())
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
