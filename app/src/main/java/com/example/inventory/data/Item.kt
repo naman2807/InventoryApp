@@ -13,5 +13,4 @@ data class Item(
     @ColumnInfo(name = "price")
     val itemPrice: Double,
     @ColumnInfo(name = "quantity")
-    val quantityInStock: Int) {
-}
+    val quantityInStock: Int)
