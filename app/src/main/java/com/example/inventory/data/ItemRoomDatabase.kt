@@ -7,4 +7,8 @@ import androidx.room.RoomDatabase
 abstract class ItemRoomDatabase: RoomDatabase() {
 
     abstract fun getDao(): ItemDao
+
+    companion object{
+
+    }
 }
