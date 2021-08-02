@@ -66,6 +66,11 @@ class ItemDetailFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val id = navigationArgs.itemId
+    }
+
     /**
      * Displays an alert dialog to get the user's confirmation before deleting the item.
      */
