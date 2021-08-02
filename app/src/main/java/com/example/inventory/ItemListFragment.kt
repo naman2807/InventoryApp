@@ -54,6 +54,13 @@ class ItemListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val adapter = ItemListAdapter{}
         binding.recyclerView.adapter = adapter
+
+        viewModel.allItems.observe(this.viewLifecycleOwner) { items ->
+            items.let {
+                adapter.submitList(it)
+            }
+        }
+
         binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
         binding.floatingActionButton.setOnClickListener {
             val action = ItemListFragmentDirections.actionItemListFragmentToAddItemFragment(
@@ -61,5 +68,6 @@ class ItemListFragment : Fragment() {
             )
             this.findNavController().navigate(action)
         }
+
     }
 }
