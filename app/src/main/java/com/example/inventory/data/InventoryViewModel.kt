@@ -1,4 +1,6 @@
 package com.example.inventory.data
 
-class InventoryViewModel {
+import androidx.lifecycle.ViewModel
+
+class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
 }
