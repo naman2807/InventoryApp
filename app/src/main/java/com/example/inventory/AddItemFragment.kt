@@ -103,6 +103,11 @@ class AddItemFragment : Fragment() {
         findNavController().navigate(action)
     }
 
+    private fun updateItem() {
+        if (isEntryValid()) {
+        }
+    }
+
     /**
      * Called before fragment is destroyed.
      */
