@@ -67,6 +67,9 @@ class AddItemFragment : Fragment() {
 
     private fun bind(item: Item){
         val price = "%.2f".format(item.itemPrice)
+        binding.apply {
+
+        }
     }
 
     private fun isEntryValid(): Boolean{
