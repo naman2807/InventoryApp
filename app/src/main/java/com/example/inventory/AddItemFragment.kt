@@ -105,6 +105,12 @@ class AddItemFragment : Fragment() {
 
     private fun updateItem() {
         if (isEntryValid()) {
+            viewModel.updateItem(
+                this.navigationArgs.itemId,
+                this.binding.itemName.toString(),
+                this.binding.itemPrice.toString(),
+                this.binding.itemCount.toString()
+            )
         }
     }
 
