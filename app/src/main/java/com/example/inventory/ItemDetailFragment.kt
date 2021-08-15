@@ -102,7 +102,11 @@ class ItemDetailFragment : Fragment() {
     }
 
     private fun editItem(){
-
+        val action = ItemDetailFragmentDirections.actionItemDetailFragmentToAddItemFragment(
+            getString(R.string.edit_fragment_title),
+            itemId = item.id
+        )
+        this.findNavController().navigate(action)
     }
 
     /**
