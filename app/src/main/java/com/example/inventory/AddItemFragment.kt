@@ -64,6 +64,7 @@ class AddItemFragment : Fragment() {
         binding.saveAction.setOnClickListener {
             addNewItem()
         }
+        val id = navigationArgs.itemId
     }
 
     private fun bind(item: Item){
