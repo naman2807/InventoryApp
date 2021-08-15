@@ -78,6 +78,7 @@ class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
         itemPrice: String,
         itemCount: String) {
         val updatedItem = getUpdatedItemEntry(itemId, itemName, itemPrice, itemCount)
+        updateItem(updatedItem)
     }
 }
 
