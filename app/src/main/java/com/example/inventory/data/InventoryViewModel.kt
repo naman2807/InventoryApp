@@ -43,6 +43,9 @@ class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
     }
 
     fun sellItem(item: Item){
+        if(item.quantityInStock > 0){
+
+        }
 
     }
 }
