@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.inventory.data.Item
 import com.example.inventory.data.getFormattedPrice
 import com.example.inventory.databinding.ItemListItemBinding
-
 /**
  * [ListAdapter] implementation for the recyclerview.
  */
@@ -34,8 +33,7 @@ class ItemListAdapter(private val onItemClicked: (Item) -> Unit) :
         holder.bind(current)
     }
 
-    class ItemViewHolder(private var binding: ItemListItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class ItemViewHolder(private var binding: ItemListItemBinding): RecyclerView.ViewHolder(binding.root){
 
         fun bind(item: Item) {
             binding.apply {

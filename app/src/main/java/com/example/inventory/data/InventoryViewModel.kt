@@ -41,8 +41,14 @@ class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
             itemDao.update(item)
         }
     }
+
+    fun sellItem(item: Item){
+
+    }
 }
 
+// Responsible for checking when the activity/fragment is in active state. When they are in active state
+// it immediately provides the viewModel instance to it. Responsible for handling lifecycle events.
 class InventoryViewModelFactory(private val itemDao: ItemDao): ViewModelProvider.Factory{
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(InventoryViewModel::class.java)) {
