@@ -52,6 +52,12 @@ class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
     fun isStockAvailable(item: Item): Boolean{
         return item.quantityInStock > 0
     }
+
+    fun deleteItem(item: Item){
+        viewModelScope.launch {
+            itemDao.delete(item)
+        }
+    }
 }
 
 // Responsible for checking when the activity/fragment is in active state. When they are in active state
