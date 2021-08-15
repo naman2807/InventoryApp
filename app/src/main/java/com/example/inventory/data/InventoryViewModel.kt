@@ -58,6 +58,14 @@ class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
             itemDao.delete(item)
         }
     }
+
+    private fun getUpdatedItemEntry(
+        itemId: Int,
+        itemName: String,
+        itemPrice: String,
+        itemCount: String): Item {
+
+    }
 }
 
 // Responsible for checking when the activity/fragment is in active state. When they are in active state
