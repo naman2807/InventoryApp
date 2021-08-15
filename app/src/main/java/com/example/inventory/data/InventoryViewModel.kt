@@ -64,7 +64,12 @@ class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
         itemName: String,
         itemPrice: String,
         itemCount: String): Item {
-
+        return Item(
+            id = itemId,
+            itemName = itemName,
+            itemPrice = itemPrice.toDouble(),
+            quantityInStock = itemCount.toInt()
+        )
     }
 }
 
