@@ -47,6 +47,9 @@ class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
             val newItem = item.copy(quantityInStock = item.quantityInStock - 1)
             updateItem(newItem)
         }
+    }
+
+    fun isStockAvailable(item: Item): Boolean{
 
     }
 }
