@@ -1,8 +1,6 @@
 Inventory - Starter Code
 ==================================
 
-Starter code for Android Basics in Kotlin.
-
 Introduction
 ------------
 
