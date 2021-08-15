@@ -107,10 +107,12 @@ class AddItemFragment : Fragment() {
         if (isEntryValid()) {
             viewModel.updateItem(
                 this.navigationArgs.itemId,
-                this.binding.itemName.toString(),
-                this.binding.itemPrice.toString(),
-                this.binding.itemCount.toString()
+                this.binding.itemName.text.toString(),
+                this.binding.itemPrice.text.toString(),
+                this.binding.itemCount.text.toString()
             )
+            val action = AddItemFragmentDirections.actionAddItemFragmentToItemListFragment()
+            this.findNavController().navigate(action)
         }
     }
 
