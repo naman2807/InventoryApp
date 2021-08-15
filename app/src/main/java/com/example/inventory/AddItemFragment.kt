@@ -65,6 +65,10 @@ class AddItemFragment : Fragment() {
         }
     }
 
+    private fun bind(item: Item){
+
+    }
+
     private fun isEntryValid(): Boolean{
         return viewModel.isEntryValid(
             binding.itemName.text.toString(),
