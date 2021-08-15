@@ -44,7 +44,7 @@ class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
 
     fun sellItem(item: Item){
         if(item.quantityInStock > 0){
-
+            val newItem = item.copy(quantityInStock = item.quantityInStock - 1)
         }
 
     }
@@ -62,3 +62,25 @@ class InventoryViewModelFactory(private val itemDao: ItemDao): ViewModelProvider
     }
 
 }
+
+/*
+Data class: copy()
+The copy() function is provided by default to all the instances of data classes. This function
+is used to copy an object for changing some of its properties, but keeping the rest of the
+properties unchanged.
+
+For example, consider the User class and its instance jack as shown below. If you want to create
+a new instance with only updating the age property, its implementation would be as follows:
+
+Example
+
+
+// Data class
+data class User(val name: String = "", val age: Int = 0)
+
+// Data class instance
+val jack = User(name = "Jack", age = 1)
+
+// A new instance is created with its age property changed, rest of the properties unchanged.
+val olderJack = jack.copy(age = 2)
+ */
