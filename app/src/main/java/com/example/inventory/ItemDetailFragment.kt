@@ -101,6 +101,10 @@ class ItemDetailFragment : Fragment() {
         findNavController().navigateUp()
     }
 
+    private fun editItem(){
+
+    }
+
     /**
      * Called when fragment is destroyed.
      */
