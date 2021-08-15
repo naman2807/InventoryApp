@@ -71,6 +71,13 @@ class InventoryViewModel(private val itemDao: ItemDao):ViewModel() {
             quantityInStock = itemCount.toInt()
         )
     }
+
+    fun updateItem(
+        itemId: Int,
+        itemName: String,
+        itemPrice: String,
+        itemCount: String) {
+    }
 }
 
 // Responsible for checking when the activity/fragment is in active state. When they are in active state
